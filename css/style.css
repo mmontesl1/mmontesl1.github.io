@@ -1,0 +1,27 @@
+#header img{
+    width: 60px;
+}
+#noticias{
+    position: relative;
+}
+#noticias .carousel img{
+    max-height: 70vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+#noticias .carousel-inner button {
+    background-color: rgb(191, 0, 33);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+#noticias .carousel-inner button:hover {
+    background-color: rgb(129, 2, 23);
+}
+
+#footer{
+    background-color: rgb(33,37,41);
+    color: white;
+}
+#footer a{
+    color: white;
+    text-decoration: none;
+}
