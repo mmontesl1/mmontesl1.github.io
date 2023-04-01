@@ -16,7 +16,13 @@
 #noticias .carousel-inner button:hover {
     background-color: rgb(129, 2, 23);
 }
-
+#aplicaciones .container-app a{
+    background-color: rgb(191, 0, 33);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+#aplicaciones .container-app a:hover {
+    background-color: rgb(129, 2, 23);
+}
 #footer{
     background-color: rgb(33,37,41);
     color: white;
