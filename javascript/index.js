@@ -1,13 +1,15 @@
-//se valida si se inicio sesion, si no no te deja ingresar a el index hasta que inicie sesion
-
-// const user = JSON.parse(localStorage.getItem('login_success')) || false
-// if(!user){
-//     window.location.href = './login.html'
-// }
-// boton del logout
-const logout = document.querySelector('header nav .container .logout')
-logout.addEventListener('click', ()=>{
-    alert("Hasta pronto")
-    localStorage.removeItem('login_success')
-    window.location.href = "login.html"
+const loginform = document.querySelector('.right-form #loginform')
+loginform.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const validUser = Users.find(user => user.email === email && user.password === password)
+    if(!validUser){
+        return alert('Usuario y/o contraseña incorrectos')
+    }
+    alert(`Bienvenido ${validUser.name}`)
+    localStorage.setItem('login_succes', JSON.stringify(validUser))
+    window.location.href = './intranet.html'
 })
+

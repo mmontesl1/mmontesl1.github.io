@@ -19,5 +19,5 @@ signoutform.addEventListener('submit', (e)=>{
     localStorage.setItem('users', JSON.stringify(Users))
     alert("Registro exitoso")
     //redireccion a login
-    window.location.href = './login.html'
+    window.location.href = './index.html'
 } )
